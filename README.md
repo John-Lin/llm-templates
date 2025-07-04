@@ -21,8 +21,8 @@ llm install llm-templates-github
 curl -sL 'https://llm.datasette.io/' | llm -t gh:John-Lin/summarize -p language English
 ```
 
-#### template parameters:
-- language: the language to use for the output, e.g. `English`, `French`, `Spanish`, etc.
+#### template parameter:
+- `language`: the language to use for the output, e.g. `English`, `French`, `Spanish`, etc.
 
 ### Meta prompt summarize
 
@@ -34,9 +34,9 @@ llm -f https://www.bbc.com/sport/football/articles/crl05r070wro -s $complex_prom
 
 #### template parameters:
 
-- language: the language to use for the output, e.g. `English`, `French`, `Spanish`, etc.
-- simple_prompt: a simple prompt to use for LLM to improve prompts e.g. `Summarize this article in one sentence.`
+- `language`: the language to use for the output, e.g. `English`, `French`, `Spanish`, etc.
+- `simple_prompt`: a simple prompt to use for LLM to improve prompts e.g. `Summarize this news article.`
 
 ## References
-- [Meta prompts](https://cookbook.openai.com/examples/enhance_your_prompts_with_meta_prompting)
+- [Enhance your prompts with meta prompting](https://cookbook.openai.com/examples/enhance_your_prompts_with_meta_prompting)
 - [Prompt generation](https://platform.openai.com/docs/guides/prompt-generation?context=text-out)
