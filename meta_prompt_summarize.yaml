@@ -1,4 +1,4 @@
-model: o4-mini
+model: o3-mini
 defaults:
   language: "Mardarin Taiwanese"
   simple_prompt: "Summarize this news article and contains the type of news, tags and sentiment analysis."
