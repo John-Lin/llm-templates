@@ -1,12 +1,12 @@
 model: o3-mini
 defaults:
-  language: "Mardarin Taiwanese"
+  language: "Traditional Chinese"
   simple_prompt: "Summarize this news article and contains the type of news, tags and sentiment analysis."
-prompt: |
+system: |
     Improve the following prompt to generate a more detailed summary in $language.
     Adhere to prompt engineering best practices.
     Make sure the structure is clear and intuitive. 
-
+prompt: |
     Current Prompt: $simple_prompt
 
     Only return the English prompt.

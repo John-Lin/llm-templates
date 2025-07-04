@@ -1,3 +1,4 @@
+model: gpt-4.1-mini
 defaults:
-  language: "Mardarin Taiwanese"
-prompt: Summarize this news article in $language
+  language: "Traditional Chinese"
+system: Summarize this news article in $language
