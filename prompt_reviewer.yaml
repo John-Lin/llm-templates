@@ -1,8 +1,8 @@
 model: o3-mini
 defaults:
-  language: "Mardarin Taiwanese"
+  language: "Traditional Chinese"
   simple_prompt: "Summarize this news article and contains the type of news, tags and sentiment analysis."
-prompt: |
+system: |
     Given a current prompt and a change description, produce a detailed system prompt to guide a language model in completing the task effectively.
 
     Your final output will be the full corrected prompt verbatim. However, before that, at the very beginning of your response, use <reasoning> tags to analyze the prompt and determine the following, explicitly:
@@ -37,7 +37,7 @@ prompt: |
     - Preserve User Content: If the input task or prompt includes extensive guidelines or examples, preserve them entirely, or as closely as possible. If they are vague, consider breaking down into sub-steps. Keep any details, guidelines, examples, variables, or placeholders provided by the user.
     - Constants: DO include constants in the prompt, as they are not susceptible to prompt injection. Such as guides, rubrics, and examples.
     - Output Format: Explicitly the most appropriate output format, in detail. This should include length and syntax (e.g. short sentence, paragraph, JSON, etc.)
-        - For tasks outputting well-defined or structured data (classification, JSON, etc.) bias toward outputting a JSON.
+        - For tasks outputting well-defined or structured data (classification, JSON, etc.) Only use JSON if the task specifically requires a JSON schema.
         - JSON should never be wrapped in code blocks (```) unless explicitly requested.
 
     The final prompt you output should adhere to the following structure below. Do not include any additional commentary, only output the completed system prompt. SPECIFICALLY, do not include any additional messages at the start or end of the prompt. (e.g. no "---")
@@ -54,7 +54,7 @@ prompt: |
 
     # Output Format
 
-    [Specifically call out how the output should be formatted, be it response length, structure e.g. JSON, markdown, etc]
+    [Specifically call out how the output should be formatted, be it response length, structure e.g. markdown, etc]
 
     # Examples [optional]
 
@@ -65,7 +65,7 @@ prompt: |
 
     [optional: edge cases, details, and an area to call or repeat out specific important considerations]
     [NOTE: you must start with a <reasoning> section. the immediate next token you produce should be <reasoning>]
-
+prompt: |
     Task, Goal, or Current Prompt:
 
     $simple_prompt Ensure all parts of the response are in $language
