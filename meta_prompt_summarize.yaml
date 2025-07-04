@@ -3,9 +3,9 @@ defaults:
   language: "Mardarin Taiwanese"
   simple_prompt: "Summarize this news article and contains the type of news, tags and sentiment analysis."
 prompt: |
-    Improve the following prompt to generate a more detailed summary.
+    Improve the following prompt to generate a more detailed summary in $language.
     Adhere to prompt engineering best practices.
-    Make sure the structure is clear and intuitive and the language is in $language.
+    Make sure the structure is clear and intuitive. 
 
     Current Prompt: $simple_prompt
 
