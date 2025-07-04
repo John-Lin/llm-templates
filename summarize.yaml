@@ -1,0 +1,3 @@
+defaults:
+  language: "Mardarin Taiwanese"
+prompt: Summarize this news article in $language
